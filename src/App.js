@@ -1,17 +1,14 @@
-import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import React, { Suspense } from 'react';
+import { ShowAvatar } from './components/ShowAvatar';
 
 function App() {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Canvas shadows>
+        <ShowAvatar />
+      </Canvas>
+    </Suspense>
   );
 }
 
