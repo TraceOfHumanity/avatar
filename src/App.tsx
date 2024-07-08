@@ -1,5 +1,9 @@
+import { Hero } from "./components/Hero";
+
 function App() {
-  return <div className="app">1</div>;
+  return <div className="h-screen w-screen">
+    <Hero />
+  </div>;
 }
 
 export default App;
